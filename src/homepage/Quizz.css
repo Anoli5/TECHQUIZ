@@ -1,0 +1,164 @@
+/* =========================
+   Main container
+========================= */
+.main {
+    margin: 80px auto 50px;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    background-color: #e8e7e7;
+}
+
+/* =========================
+   Quiz Card
+========================= */
+.card {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #fcc048; /* PC border */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   Card Image
+========================= */
+.logo-picture {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.logo-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   Info badges (Q & Plays)
+========================= */
+.question-no {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #fcc048;
+    color: #000;
+    text-align: center;
+}
+
+.plays-no {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #fcc048;
+    color: #000;
+    text-align: center;
+}
+
+/* =========================
+   Inner card content
+========================= */
+.inner-box {
+    padding: 15px 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.quiz-name {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    background-color: #fcc048;
+    border: 2px solid #f3e0b9;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   Grade and Level
+========================= */
+.grade-level {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.grade-icon, .level-icon {
+    transform: scale(1.5);
+}
+
+.grade-text, .level-text {
+    font-weight: 600;
+}
+
+/* =========================
+   Play Now Button
+========================= */
+.play-now {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    border: 2px solid #fcc048;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-now:hover {
+    background-color: #fcc048;
+    color: white;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media screen and (max-width: 1024px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .card {
+        height: auto;
+    }
+}
